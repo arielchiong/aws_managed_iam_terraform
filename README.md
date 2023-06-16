@@ -27,7 +27,7 @@ Below are the details needed to create IAM user
 | Groups | Admin, Dev, Billing | one or more groups can be added
 | Access Keys | true or false | if user need some access keys for cli
 | Console Login | true or false | if user need console login
-| Tags | "DevOps" "Dev" "QA" "Data" or any | Team Tags
+| Tags | "DevOps" "Dev" "QA" "Data" or any | Team Tags only one is allowed
 
 > Append the following in file `users/users.yaml`
 ```
