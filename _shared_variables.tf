@@ -14,4 +14,8 @@ locals {
   billing_policy_names = [
     for name in split("\n", file("${path.module}/policies/billing_policy.txt")) : replace(name, "\r", "")
   ]      
+
+  # database_policy_names = [
+  #   for name in split("\n", file("${path.module}/policies/database_policy.txt")) : replace(name, "\r", "")
+  # ]     
 }
