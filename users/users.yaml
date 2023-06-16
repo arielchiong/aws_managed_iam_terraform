@@ -1,0 +1,110 @@
+---
+users:
+- name: Daryl Tan
+  email: daryl.tan@laconicglobal.com
+  groups:
+    - Dev
+  access_keys: false
+  console_login: true
+  tags: "QA Tester"  
+- name: Kianhow Tan
+  email: kianhow.tan@laconicglobal.com
+  groups:
+    - Dev
+  access_keys: true
+  console_login: true
+  tags: "QA Tester"      
+- name: Benedict Tan
+  email: benedict.tan@laconicglobal.com
+  groups:
+    - Dev
+  access_keys: false
+  console_login: true
+  tags: "QA Tester"  
+- name: John Ang
+  email: john.ang@laconicglobal.com
+  groups:
+    - Dev
+  access_keys: false
+  console_login: true
+  tags: "Data"
+- name: Bran Desoete
+  email: bram.desoete@laconicglobal.com
+  groups:
+    - Dev
+  access_keys: false
+  console_login: true
+  tags: "Data"
+- name: Vincent Loy
+  email: vincent.loy@laconicglobal.com
+  groups:
+    - Dev
+  access_keys: false
+  console_login: true
+  tags: "PMO"
+- name: David Loh
+  email: david.loh@laconicglobal.com
+  groups:
+    - Dev
+  access_keys: false
+  console_login: true
+  tags: "Backend"
+- name: Ferry Chandra
+  email: ferry.chandra@laconicglobal.com
+  groups:
+    - Dev
+  access_keys: true
+  console_login: true
+  tags: "Backend"        
+- name: Zhiyi Ong
+  email: zhiyi.ong@laconicglobal.com
+  groups:
+    - Dev
+  access_keys: false
+  console_login: true
+  tags: "Frontend"
+- name: Shubham Gupta
+  email: shubham.gupta@laconicglobal.com
+  groups:
+    - Admin
+    - Dev
+  access_keys: true
+  console_login: true
+  tags: "Backend"
+- name: Dede Tanuwijaya
+  email: dede.tanuwijaya@laconicglobal.com
+  groups:
+    - Dev
+  access_keys: false
+  console_login: true
+  tags: "Dev"
+- name: Anil Kumar
+  email: anil.kumar@laconicglobal.com
+  groups:
+    - Admin
+    - Dev
+  access_keys: false
+  console_login: true
+  tags: "Frontend"
+- name: Weiyih Cheong
+  email: weiyih.cheong@laconicglobal.com
+  groups:
+    - Dev
+  access_keys: false
+  console_login: true
+  tags: "Dev"
+- name: Steve Pham
+  email: steve.pham@laconicglobal.com
+  groups:
+    - Admin
+    - Dev
+  access_keys: false
+  console_login: true
+  tags: "Architect"            
+- name: Pawat Sethaput
+  email: pawat.sethaput@laconicglobal.com
+  groups:
+    - Dev
+  access_keys: false
+  console_login: true
+  tags: "Architect"

@@ -1,0 +1,4 @@
+ReadOnlyAccess
+IAMUserChangePassword
+AmazonRDSPerformanceInsightsReadOnly
+jaia-s3-object-policy

@@ -1,3 +1,21 @@
+### Terraform
+This Terraform scripts creates and manageds AWS IAM User with or without AWS login or AWS Access keys and add users to groups `Admin` `Dev` `Billing` or can add more.
+
+Best to use for Organizations without SSO integrations in AWS and only managed users in AWS. This also supports importing existing IAM users for easy management moving forward.
+
+## AWS Provider
+provider and backend configuration `_provider.tf`
+Enable and create the following if need to store terraform state in AWS S3
+
+```
+  backend "s3"{
+    bucket = "your-terraform-state-bucket"
+    key = "folder/terraform.tfstate"
+    region = "us-east-1"
+    dynamodb_table = "your-terraform-terraform-statefile-locks"
+    encrypt = true
+  }
+```
 ## Add IAM User
 
 Below are the details needed to create IAM user
@@ -33,14 +51,14 @@ Below are the details needed to create IAM user
   tags: "DevOps"  
 ```
 
-### Import IAM USER
+### Terraform Import IAM USER
 ```
 terraform import 'aws_iam_access_key.iam_user_key["name in yaml file"]' name_in_yaml_file
 e.g.
-terraform import 'aws_iam_user.iam_user_key["John Smith"]' john.smith@example.com
+terraform import 'aws_iam_user.iam_user_key["John Smith"]' john.smith@laconicglobal.com
 ```
 
-### Import IAM USER KEY
+### Terraform Import IAM USER KEY
 > if user has existing access key and make sure to set the value to true in `users/users.yaml` `access_keys: true`
 ```
 terraform import 'aws_iam_access_key.iam_user_key["name in yaml file"]' ACCESS_KEY_NAME
@@ -48,17 +66,17 @@ e.g.
 terraform import 'aws_iam_access_key.iam_user_key["John Smith"]' AKIA5EIAMX7KUQILMZJX
 ```
 
-## Import Login profile
+## Login profile
 ```
 terraform import 'aws_iam_user_login_profile.iam_users_login["name in yaml file"]' login_name
 e.g.
 terraform import 'aws_iam_user_login_profile.iam_users_login["Kianhow Tan"]' john.smith@example.com
 ```
-## Import Groups
+## Groups
 ```
- terraform import 'aws_iam_user_group_membership.users_group_attachment["name in yaml file"]' login-name/group-name
+terraform import 'aws_iam_user_group_membership.users_group_attachment["name in yaml file"]' login-name/group-name
 e.g.
-terraform import 'aws_iam_user_group_membership.users_group_attachment["John Smith"]' john.smith@example.com/my-team
+terraform import 'aws_iam_user_group_membership.users_group_attachment["John Smith"]' john.smith@laconicglobal.com/singapore-team
 ```
 
 ## Output
@@ -92,7 +110,6 @@ Billing
 update `iam-policy.tf` and `users.tf`
 
 ## Variable file
-`variable.tf`
 ```
 variable "group-admin" {
   type = string
