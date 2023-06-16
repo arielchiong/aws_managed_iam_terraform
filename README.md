@@ -37,7 +37,7 @@ Below are the details needed to create IAM user
 ```
 terraform import 'aws_iam_access_key.iam_user_key["name in yaml file"]' name_in_yaml_file
 e.g.
-terraform import 'aws_iam_user.iam_user_key["John Smith"]' john.smith@laconicglobal.com
+terraform import 'aws_iam_user.iam_user_key["John Smith"]' john.smith@example.com
 ```
 
 ### Import IAM USER KEY
@@ -58,7 +58,7 @@ terraform import 'aws_iam_user_login_profile.iam_users_login["Kianhow Tan"]' joh
 ```
  terraform import 'aws_iam_user_group_membership.users_group_attachment["name in yaml file"]' login-name/group-name
 e.g.
-terraform import 'aws_iam_user_group_membership.users_group_attachment["John Smith"]' john.smith@laconicglobal.com/singapore-team
+terraform import 'aws_iam_user_group_membership.users_group_attachment["John Smith"]' john.smith@example.com/my-team
 ```
 
 ## Output
