@@ -1,7 +1,9 @@
-### Terraform
-This Terraform scripts creates and manageds AWS IAM User with or without AWS login or AWS Access keys and add users to groups `Admin` `Dev` `Billing` or can add more.
+### Terraform for AWS IAM USERS (Keys, Console Login)
+This Terraform scripts creates and manages AWS IAM User with or without AWS login or AWS Access keys and add users to groups `Admin` `Dev` `Billing` or can add more.
 
 Best to use for Organizations without SSO integrations in AWS and only managed users in AWS. This also supports importing existing IAM users for easy management moving forward.
+
+> make sure your AWS account has the right access to create the resources.
 
 ## AWS Provider
 provider and backend configuration `_provider.tf`
@@ -27,7 +29,7 @@ Below are the details needed to create IAM user
 | Groups | Admin, Dev, Billing | one or more groups can be added
 | Access Keys | true or false | if user need some access keys for cli
 | Console Login | true or false | if user need console login
-| Tags | "DevOps" "Dev" "QA" "Data" or any | Team Tags only one is allowed
+| Tags | "DevOps" "Dev" "QA" "Data" or any | Team Tags
 
 > Append the following in file `users/users.yaml`
 ```
@@ -104,12 +106,8 @@ AmazonRDSPerformanceInsightsReadOnly
 > `policies/billing_policy.txt` 
 ```
 Billing
-IAMUserChangePassword
 ```
-> `policies/database_policy.txt` 
-```
-IAMUserChangePassword
-```
+
 ### Custom policies
 update `iam-policy.tf` and `users.tf`
 
@@ -157,6 +155,6 @@ locals {
 
   # database_policy_names = [
   #   for name in split("\n", file("${path.module}/policies/database_policy.txt")) : replace(name, "\r", "")
-  # ]         
+  # ]    
 }
 ```
