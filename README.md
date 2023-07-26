@@ -55,9 +55,9 @@ Below are the details needed to create IAM user
 
 ### Terraform Import IAM USER
 ```
-terraform import 'aws_iam_access_key.iam_user_key["name in yaml file"]' name_in_yaml_file
+terraform import 'aws_iam_user.iam_users["name in yaml file"]' name_in_yaml_file
 e.g.
-terraform import 'aws_iam_user.iam_user_key["John Smith"]' john.smith@laconicglobal.com
+terraform import 'aws_iam_user.iam_users["John Smith"]' john.smith@laconicglobal.com
 ```
 
 ### Terraform Import IAM USER KEY
