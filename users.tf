@@ -97,7 +97,8 @@ resource "aws_iam_user_group_membership" "users_group_attachment" {
   groups = each.value.groups != null ? [
     for group in each.value.groups :
     group == "Admin" ? aws_iam_group.admin_group.name : 
-    group == "Dev" ? data.aws_iam_group.dev_group.name : 
+    group == "Dev" ? aws_iam_group.dev_group.name : 
+    # group == "Database" ? aws_iam_group.db_group.name :
     aws_iam_group.billing_group.name
   ] : []
 }
